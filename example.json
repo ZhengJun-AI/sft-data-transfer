@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "张三",
+    "age": 28,
+    "isActive": true,
+    "email": "zhangsan@example.com",
+    "tags": ["开发", "前端"],
+    "address": {
+      "city": "北京",
+      "district": "朝阳区"
+    },
+    "score": 85.5
+  },
+  {
+    "id": 2,
+    "name": "李四",
+    "age": 32,
+    "isActive": false,
+    "email": "lisi@example.com",
+    "tags": ["设计", "UI"],
+    "address": {
+      "city": "上海",
+      "district": "浦东新区"
+    },
+    "score": 92.0
+  },
+  {
+    "id": 3,
+    "name": "王五",
+    "age": 25,
+    "isActive": true,
+    "email": "wangwu@example.com",
+    "tags": ["测试", "后端"],
+    "address": {
+      "city": "广州",
+      "district": "天河区"
+    },
+    "score": 78.5
+  }
+]
