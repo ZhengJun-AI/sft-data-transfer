@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 数据处理工作台
+## 功能特点
 
-## Getting Started
+- 📝 JSON数据导入和导出
+- 🔄 灵活的列操作（新增、复制）
+- 🤖 集成LLM处理能力
+- 📊 表格式数据展示和编辑
+- 🔍 数据筛选和排序
+- 📱 响应式设计，支持多种设备
 
-First, run the development server:
+## 技术栈
+
+- Next.js - React框架
+- TypeScript - 类型安全
+- Tailwind CSS - 样式框架
+- shadcn/ui - UI组件库
+- TanStack Table - 表格组件
+
+## 快速开始
+### 环境要求
+
+- Node.js 18.0.0 或更高版本
+- npm 或 yarn 包管理器
+
+### 安装
 
 ```bash
+# 克隆项目
+git clone [项目地址]
+
+# 安装依赖
+npm install
+
+# 启动开发服务器
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 配置
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+在项目根目录创建 `.env` 文件，配置LLM API相关参数：
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+NEXT_PUBLIC_LLM_API_ENDPOINT=你的API地址
+NEXT_PUBLIC_LLM_MODEL=你的模型ID
+NEXT_PUBLIC_LLM_API_KEY=你的API密钥
+```
 
-## Learn More
+## 使用说明
 
-To learn more about Next.js, take a look at the following resources:
+### 视频演示
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+观看以下视频，快速了解数据处理工作台的主要功能和操作方法：
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<video width="100%" controls>
+  <source src="usage.mp4" type="video/mp4">
+  您的浏览器不支持视频标签。
+</video>
 
-## Deploy on Vercel
+### 功能详解
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **数据导入**
+   - 支持导入JSON格式数据
+   - 自动识别数据结构，生成表格
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **数据编辑**
+   - 双击单元格进行编辑
+   - 支持批量选择数据
+   - 可以添加新列
+   - 支持列值复制
+
+3. **LLM处理**
+   - 选择需要处理的数据行
+   - 输入处理提示词
+   - 支持使用{列名}引用数据内容
+   - 实时显示处理进度
+
+4. **数据导出**
+   - 支持导出为JSON格式
+   - 保留所有修改和处理结果
+
+## 开发说明
+### 项目结构
+
+```
+src/
+  ├── app/          # 页面和API路由
+  ├── components/   # React组件
+  ├── config/       # 配置文件
+  └── lib/          # 工具函数
+```
+
+### 主要组件
+
+- `DataTable` - 数据表格组件，支持编辑和选择
+- `FileUpload` - 文件上传组件
+- `LLMProcessPanel` - LLM处理面板
+
+## 贡献
+
+欢迎提交Issue和Pull Request！
