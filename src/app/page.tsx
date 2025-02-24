@@ -10,7 +10,7 @@ import exampleData from '../../example.json'
 
 export default function Home() {
   const [data, setData] = React.useState<any[]>([])
-  const [columns, setColumns] = React.useState<ColumnDef<any, any>[]>([])
+  const [columns, setColumns] = React.useState<any[]>([])
   const [selectedRows, setSelectedRows] = React.useState<any[]>([])
   const [hasChanges, setHasChanges] = React.useState(false)
   const [showLLMPanel, setShowLLMPanel] = React.useState(false)
@@ -69,7 +69,8 @@ export default function Home() {
       }
       
       setHasChanges(true)
-      setShowLLMPanel(false)
+      // 移除自动隐藏面板的代码
+      // setShowLLMPanel(false)
     } catch (error) {
       console.error('LLM处理错误:', error)
       alert('处理过程中发生错误')
@@ -183,6 +184,7 @@ export default function Home() {
                   setColumns([])
                   setSelectedRows([])
                   setHasChanges(false)
+                  setShowLLMPanel(false)
                 }}
               >
                 上传新文件
